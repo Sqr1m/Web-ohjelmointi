@@ -1,0 +1,20 @@
+p {
+  color: red;
+}
+
+
+h1 { color: #0b3d91; }
+h2 { color: red; }
+h3 { color: red; }
+
+ul li { color: #ec0082; }
+ol li { color: #ec0082; }
+
+
+.codebox {
+  font-family: monospace;
+  background: #f4f4f4;
+}
+
+img { max-width: 100%; height: auto; display:block; margin: 12px 0; }
+
