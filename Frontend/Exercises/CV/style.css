@@ -18,22 +18,22 @@
     font-size:16px;
   }
   .container{max-width:var(--max-width);margin:0 auto;padding:20px}
-  /* Header and navigation */
+
   .site-header{background:transparent;padding:12px 0;border-bottom:1px solid rgba(11,19,32,0.06)}
   .logo{margin:0;display:inline-block;font-weight:700}
   .main-nav{float:right}
   .main-nav a{color:var(--muted);text-decoration:none;margin-left:16px;padding:8px 6px;border-radius:8px}
   .main-nav a.active, .main-nav a:hover{color:var(--text);background:rgba(14,165,233,0.08)}
-  /* Layout: two-column on wide screens */
+
   .main-grid{display:grid;grid-template-columns:320px 1fr;gap:20px;align-items:start;padding-top:18px}
-  /* Hero */
+
   .hero{display:flex;gap:18px;align-items:center}
   .avatar{width:140px;height:140px;object-fit:cover;border-radius:12px;border:1px solid rgba(11,19,32,0.06)}
   .lead{color:var(--muted);margin-top:6px}
-  /* Buttons */
+
   .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;background:var(--accent);color:white;font-weight:600;margin-right:8px}
   .btn.ghost{background:transparent;border:1px solid rgba(11,19,32,0.06);color:var(--text)}
-  /* Cards and blocks */
+
   .summary{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,19,32,0.04)}
   .content{padding-top:18px}
   .skills{display:flex;flex-wrap:wrap;gap:10px}
@@ -48,7 +48,7 @@
   .contact-form label{display:block;margin-bottom:12px}
   .contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(11,19,32,0.06);background:white;color:var(--text)}
   .contact-form button{margin-top:8px;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;border:none}
-  /* Responsive rules */
+
   @media(max-width:880px){
     .main-grid{grid-template-columns:1fr}
     .main-nav{float:none;margin-top:12px}

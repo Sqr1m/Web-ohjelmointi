@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <title>Lemmikkilomake</title>
+</head>
+<body>
+
+<h2>Lemmikkilomake</h2>
+
+<form>
+  <label>Lemmikin nimi:
+    <input name="pet_name">
+  </label>
+  <br>
+
+  <label>Lemmikin syntymäaika:
+    <input type="date" name="pet_birthdate">
+  </label>
+
+  <p>Laji:</p>
+  <label><input type="radio" name="species" value="kissa"> Kissa</label>
+  <label><input type="radio" name="species" value="koira"> Koira</label>
+  <label><input type="radio" name="species" value="hamsteri"> Hamsteri</label>
+  <label><input type="radio" name="species" value="kaarme"> Käärme</label>
+
+  <p>Lemmikin lempiasiat:</p>
+  <label><input type="checkbox" name="favs[]" value="nukkuminen"> Nukkuminen</label>
+  <label><input type="checkbox" name="favs[]" value="ruoka"> Ruoka</label>
+  <label><input type="checkbox" name="favs[]" value="leikkiminen"> Leikkiminen</label>
+  <label><input type="checkbox" name="favs[]" value="juokseminen"> Juokseminen</label>
+
+  <p>Väri:</p>
+  <label>Valitse väri:
+    <input type="color" name="color" value="#ff0000">
+  </label>
+
+  <p>Varusteet:</p>
+  <select name="equipment[]" size="4" multiple>
+    <option value="panta">Panta</option>
+    <option value="hihna">Hihna</option>
+    <option value="kuljetuslaatikko">Kuljetuslaatikko</option>
+    <option value="lelut">Lelut</option>
+  </select>
+
+  <p>
+    <button>Lähetä</button>
+    <button type="reset">Nollaa</button>
+  </p>
+</form>
+
+</body>
+</html>
