@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Palkkalaskuri</title>
-</head>
+<head><meta charset="utf-8"><title>Palkkalaskuri</title></head>
 <body>
   <form action="palkka.php" method="post">
-    Tuntipalkka: <input name="hourlywage"><br>
-    Tunnit: <input name="hours"><br>
-    Viikonloppulisä: <input name="weekendbonus"><br>
-    Viikonloput: <input name="weekends"><br>
-    <input type="submit" value="Laske">
+    Tuntipalkka: <input type="text" name="tuntipalkka" required><br>
+    Tuntimäärä: <input type="text" name="tuntimaara" required><br>
+    Viikonloppulisä: <input type="text" name="viikonloppulisa" value="0"><br>
+    Viikonloppujen määrä: <input type="text" name="viikonloppumaara" value="0"><br>
+    <input type="submit" value="Lähetä">
   </form>
 </body>
 </html>
