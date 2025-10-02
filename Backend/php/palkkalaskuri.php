@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>Palkkalaskuri</title></head>
+<head><meta charset="utf-8"><title></title></head>
 <body>
   <form action="palkka.php" method="post">
     Tuntipalkka: <input type="text" name="tuntipalkka" required><br>

@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
 <meta charset="UTF-8">
-<title>Hintalaskuri</title>
+<title></title>
 </head>
 <body>
 <h1>Tuotteen hintatiedot</h1>
