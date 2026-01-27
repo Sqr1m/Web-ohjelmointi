@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salary calculator</title>
+
+  <style>
+    #result {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Salary calculator</h1>
+
+  <label>Hourly wage (€)</label><br>
+  <input type="number" id="wage"><br><br>
+
+  <label>Hours worked (h)</label><br>
+  <input type="number" id="hours"><br><br>
+
+  <label>Tax rate (%)</label><br>
+  <input type="number" id="tax"><br><br>
+
+  <button onclick="runCalculation()">Calculate</button>
+
+  <div id="result"></div>
+
+  <script>
+    function runCalculation() {
+
+      const wageEl = document.getElementById("wage");
+      const hoursEl = document.getElementById("hours");
+      const taxEl = document.getElementById("tax");
+      const resultEl = document.getElementById("result");
+
+      const wage = Number(wageEl.value);
+      const hours = Number(hoursEl.value);
+      const taxRate = Number(taxEl.value);
+
+      if (wage < 0 || hours < 0 || taxRate < 0) {
+        resultEl.style.display = "block";
+        resultEl.style.color = "red";
+        resultEl.textContent = "Check the information you entered.";
+        return;
+      }
+
+      const gross = wage * hours;
+      const tax = gross * (taxRate / 100);
+      const net = gross - tax;
+
+      resultEl.style.display = "block";
+      resultEl.innerHTML =
+        "Gross salary: €" + gross.toFixed(2) + "<br>" +
+        "Tax amount: €" + tax.toFixed(2) + "<br>" +
+        "Net salary: €" + net.toFixed(2);
+
+      if (net < 100) {
+        resultEl.style.color = "red";
+      } else {
+        resultEl.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+</html>
