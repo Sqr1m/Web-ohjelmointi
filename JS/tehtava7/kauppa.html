@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Shop</title>
+</head>
+<body>
+
+<h1>Shop</h1>
+
+<div id="product"></div>
+
+<label>Quantity: </label>
+<input type="number" id="quantity" value="1" min="1">
+<button onclick="addToCart()">Add to cart</button>
+
+
+<h2>Shopping Cart</h2>
+<div id="cart"></div>
+<div id="total"></div>
+
+<script>
+
+  const product = {
+    name: "Coffee Mug",
+    price: 5.99
+  };
+
+  const productDiv = document.getElementById("product");
+  productDiv.textContent = product.name + " - €" + product.price.toFixed(2);
+
+  const cart = [];
+
+  function addToCart() {
+    const quantity = Number(document.getElementById("quantity").value);
+
+    if (quantity <= 0) return; 
+
+    const item = {
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      total: product.price * quantity
+    };
+
+    cart.push(item);
+
+    updateCartView();
+  }
+
+  function updateCartView() {
+    const cartDiv = document.getElementById("cart");
+    const totalDiv = document.getElementById("total");
+
+    cartDiv.innerHTML = "";
+    let totalAmount = 0;
+
+    cart.forEach(function(item, index) {
+      const line = document.createElement("div");
+      line.textContent = item.name + " x " + item.quantity + " = €" + item.total.toFixed(2);
+      cartDiv.appendChild(line);
+
+      totalAmount += item.total;
+    });
+
+    totalDiv.textContent = "Total: €" + totalAmount.toFixed(2);
+  }
+</script>
+
+</body>
+</html>
