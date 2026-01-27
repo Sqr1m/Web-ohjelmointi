@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car object</title>
+</head>
+<body>
+
+  <h1>Car information</h1>
+
+  <div id="info"></div>
+  <div id="status"></div>
+
+  <script>
+
+    const car = {
+      make: "Toyota",
+      model: "Corolla",
+      modelYear: 2020,
+      inProgress: false,
+
+      start: function () {
+        this.inProgress = true;
+        document.getElementById("status").textContent = "Auto started";
+      }
+    };
+
+    const infoDiv = document.getElementById("info");
+    infoDiv.innerHTML =
+      "Make: " + car.make + "<br>" +
+      "Model: " + car.model + "<br>" +
+      "Model year: " + car.modelYear + "<br>" +
+      "In progress: " + car.inProgress;
+
+    car.start();
+  </script>
+
+</body>
+</html>
