@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input { padding: 5px; margin: 5px; }
+    button { padding: 5px 10px; cursor: pointer; }
+    #tulos  { font-weight: bold; font-size: 1.2em; color: green; }
+  </style>
+</head>
+<body>
+
+  <h1>Calculator</h1>
+  <p>Enter two numbers and I will add them together.</p>
+
+  <label>Chapter 1:</label>
+  <input type="number" id="number1" placeholder="Enter Chapter 1"> <br>
+
+  <label>Chapter 2:</label>
+  <input type="number" id="number2" placeholder="Enter number 2"> <br>
+
+  <button onclick="calculateSum()">Calculate sum</button>
+
+  <p>Result: <span id="tulos">-</span></p>
+
+  <script>
+    
+    function calculateSum() {
+
+      const el1 = document.getElementById("number1");
+      const el2 = document.getElementById("number2");
+      const output = document.getElementById("tulos");
+
+      const val1 = Number(el1.value);
+      const val2 = Number(el2.value);
+
+
+
+      const sum = val1 + val2;
+
+      output.textContent = sum;
+      output.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
