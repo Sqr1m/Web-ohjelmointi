@@ -3,43 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Author — Portfolio</title>
+  <title>Bogdan — Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <div id="progress" class="progress"></div>
+
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Author</h1>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container header-inner">
+      <h1 class="logo">Bogdan</h1>
+      <div class="nav-wrap">
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About me</a>
+          <a href="portfolio.html" class="active" aria-current="page">Portfolio</a>
+          <a href="experience.html">Experience</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <h2>Portfolio</h2>
-    <div class="projects-grid">
-      <article class="project">
-        <img src="assets/TheFirstProject.webp" alt="Project 1">
-        <h4>Project 1 — The First Game</h4>
-        <p>Short description: Unity, C#, Developer.</p>
-        <p><a href="https://www.youtube.com/watch?v=QDia3e12czc">Repository / Live</a></p>
-      </article>
+    <section class="section reveal">
+      <h2>Portfolio</h2>
+      <p>Use the buttons to filter projects. Add your real screenshots, tags, and links here.</p>
 
-      <article class="project">
-        <img src="assets/TheSecondProject.png" alt="Project 2">
-        <h4>Project 2 — Website</h4>
-        <p>This is it.</p>
-      </article>
-    </div>
+      <div class="projects-toolbar" style="margin-top: 18px;">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="unity" type="button">Unity</button>
+        <button class="filter-btn" data-filter="web" type="button">Web</button>
+        <button class="filter-btn" data-filter="blender" type="button">Blender</button>
+      </div>
+
+      <div class="projects-grid" style="margin-top: 18px;">
+        <article class="project reveal" data-tags="unity,game">
+          <img src="assets/TheFirstProject.webp" alt="Project 1">
+          <div class="project-body">
+            <h3>Project 1 — The First Game</h3>
+            <p>Unity, C#, gameplay systems, and a focused first playable experience.</p>
+            <div class="project-meta">
+              <span class="meta-chip">Unity</span>
+              <span class="meta-chip">C#</span>
+              <span class="meta-chip">Game</span>
+            </div>
+            <a href="#" class="btn ghost">Repository / Live</a>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tags="web">
+          <img src="assets/WEB.png" alt="Project 2">
+          <div class="project-body">
+            <h3>Project 2 — Website</h3>
+            <p>A responsive web project built to be clean, readable, and visually strong.</p>
+            <div class="project-meta">
+              <span class="meta-chip">HTML</span>
+              <span class="meta-chip">CSS</span>
+              <span class="meta-chip">JS</span>
+            </div>
+            <a href="#" class="btn ghost">View project</a>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tags="blender">
+          <img src="SOON..." alt="soon...">
+          <div class="project-body">
+            <h3>Project 3 — 3D Scene</h3>
+            <p>Blender scene with attention to form, lighting, and composition.</p>
+            <div class="project-meta">
+              <span class="meta-chip">Blender</span>
+              <span class="meta-chip">3D</span>
+              <span class="meta-chip">Visuals</span>
+            </div>
+            <a href="#" class="btn ghost">Open render</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© Author</div>
+    <div class="container">© <span id="year"></span> Bogdan</div>
   </footer>
+
+  <div id="toast" class="toast"></div>
 </body>
 </html>

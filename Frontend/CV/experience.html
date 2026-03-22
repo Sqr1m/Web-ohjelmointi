@@ -3,42 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Author — Experience</title>
+  <title>Bogdan — Experience</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <div id="progress" class="progress"></div>
+
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Author</h1>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="experience.html" class="active">Experience</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container header-inner">
+      <h1 class="logo">Bogdan</h1>
+      <div class="nav-wrap">
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About me</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="experience.html" class="active" aria-current="page">Experience</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <h2>Work & Education</h2>
-    <section class="timeline">
-      <div class="entry">
-        <h4>NoOne — TheBestCompanyInTheWorld</h4>
-        <span class="period">2021 — 2010</span>
-        <p>Did many things.</p>
-      </div>
+    <section class="section reveal">
+      <h2>Work & Education</h2>
+      <p>A clean timeline works much better than plain text blocks. Keep the entries short, specific, and outcome-focused.</p>
 
-      <div class="entry">
-        <h4>Vuoksi</h4>
-        <span class="period">2024 — Present</span>
-        <p>Studying, big results, <a href="https://www.youtube.com/watch?v=QDia3e12czc">link on my project</a>.</p>
+      <div class="timeline" style="margin-top: 20px;">
+        <div class="entry reveal">
+          <span class="period">2024 — Present</span>
+          <h3>Vuoksi</h3>
+          <p>Studying software development, building projects, and improving technical and visual quality with each assignment.</p>
+        </div>
+
+        <div class="entry reveal">
+          <span class="period">2023 — 2024</span>
+          <h3>Self-directed projects</h3>
+          <p>Worked on web experiments, small game prototypes, and 3D practice in Blender.</p>
+        </div>
+
+        <div class="entry reveal">
+          <span class="period">2021 — 2023</span>
+          <h3>First coding and creative work</h3>
+          <p>Built the foundation: learning programming logic, interface basics, and visual composition.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© Author</div>
+    <div class="container">© <span id="year"></span> Bogdan</div>
   </footer>
+
+  <div id="toast" class="toast"></div>
 </body>
 </html>
