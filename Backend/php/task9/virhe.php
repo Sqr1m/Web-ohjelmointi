@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Virhe</title>
+  <title>Error</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <?php include 'navigaatio.php'; ?>
+
   <div class="container">
     <main>
-      <h1>Virhe</h1>
-      <p>Valitettavasti viestin lähetys epäonnistui. Tarkista kentät ja yritä uudelleen.</p>
+      <h1>Error</h1>
+      <p>Something went wrong. Please check the form and try again.</p>
     </main>
   </div>
 </body>

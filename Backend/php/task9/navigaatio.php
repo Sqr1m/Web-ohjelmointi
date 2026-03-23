@@ -1,8 +1,8 @@
 <?php
 $pages = [
-    "Etusivu" => "etusivu.php",
-    "Tuotteet" => "tuotteet.php",
-    "Lomake" => "lomake.php"
+    "Home" => "etusivu.php",
+    "Products" => "tuotteet.php",
+    "Form" => "lomake.php"
 ];
 
 $current = basename($_SERVER['PHP_SELF']);
@@ -10,7 +10,7 @@ $current = basename($_SERVER['PHP_SELF']);
 <nav>
   <ul>
     <?php foreach ($pages as $name => $url): ?>
-      <li class="<?php if ($current == $url) echo 'active'; ?>">
+      <li class="<?php echo ($current === $url) ? 'active' : ''; ?>">
         <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
       </li>
     <?php endforeach; ?>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Etusivu</title>
+  <title>Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <?php include 'navigaatio.php'; ?>
+
   <div class="container">
     <main>
-      <h1>Tervetuloa etusivulle</h1>
-      <p>Tämä on esimerkkisivusto, jossa käytetään PHP:n include-toiminnallisuutta ja erillistä CSS-tiedostoa.</p>
+      <h1>Welcome</h1>
+      <p>This site uses PHP includes, a separate CSS file, and simple server-side logic.</p>
     </main>
   </div>
 </body>
